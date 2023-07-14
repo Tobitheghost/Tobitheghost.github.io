@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Base{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About</a></li>
+    
+                </ul>
+            </nav>
+            <a href="#"><button>Contact</button></a>
+        </header>
+        
+        {% block content %}
+            <h1>
+                Base
+            </h1>
+        {% endblock %}
+            
+    </body>
+</html>
