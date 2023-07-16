@@ -61,9 +61,7 @@ button:hover {
     height: 100vh;
     display: grid;
 }
-.slide > p ,.slide > div{
-    outline: black solid 2px;
-}
+
 .wrapper {
     display: flex;
     flex-direction: row;
@@ -74,44 +72,114 @@ button:hover {
 }
 
 .slide .left {
-    outline: yellow solid 2px;
     width: 50vw;
     display: block;
-    justify-content: center;
-    padding-top: 35%;
     grid-column-start: 1;
     grid-column-end: 2;
 }
+.hero_text {
+    padding: 30% 10%;
+}
+.blerb {
+    font-size: 6vh;
+}
+.left {
+    display: block;
+}
+.socials {
+    display: inline-flex;
+    left: 50%;
+    padding: 2%;
+}
+.soc {
+    padding: 5px;
+}
+.soc img{
+    width: auto;
+    height: 3vh;
+}
 
-.slide .right {
-    outline: orchid solid 2px;    
+.slide .right {   
     width: 50vw;
     grid-column-start: 2;
     grid-column-end: 3;    
 }
-.left {
-    display: block;
-    padding: 10%;
-    justify-content: center;
+
+.shape_links {
+    position: absolute;
     align-items: center;
+    justify-content: center;
 }
 
-.left p {
-    outline: pink solid 2px;
+.circle_link {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    border-left: 3vh solid transparent;
+    border-top: 3vh solid black;
+    border-right: 3vh solid black;
+    border-bottom: 3vh solid transparent;
+    top: 45vh;
+    scale: 500%;
+
+    cursor: pointer;
+    transition: 2s;
+    filter: drop-shadow(1px 1px 3px rgba(0,0,0,.9));
+}
+.circle_link:hover {
+    scale: 675%;
+    filter: drop-shadow(1px 1px 9px rgba(0,0,0,.2));
+}
+.top_bar {
+    position: absolute;
+    height: 11vh;
+    top: 30vh;
+    border-left: 3vh solid transparent;
+    border-right: 40vh solid rgba(122, 122, 122, 0.75);
+    border-top: 20px solid transparent;
+    cursor: pointer;
+    transition: 2s;
+}
+.top_bar a {
+    font-family: Impact;
+    position: absolute;
+    color: red;
+    transform: rotate(359deg);
+    left: 5vw;
+    top: -10%;
+    font-size: 9vh;
+}
+.top_bar:hover {
+    border-right: 250vh solid rgb(240, 240, 240);
+}
+.middle_bar {
+    position: absolute;
+    height: 12vh;
+    top: 42vh;
+    border-left: 3vh solid transparent;
+    border-right: 40vh solid rgba(122, 122, 122, 0.75);
+    cursor: pointer;
+    transition: 2s;
+}
+.middle_bar:hover {
+    border-right: 300vw solid rgb(0, 255, 170)
+}
+.borrom_bar {
+    position: absolute;
+    height: 11vh;
+    top: 55vh;
+    border-left: 3vh solid transparent;
+    border-right: 40vh solid rgba(122, 122, 122, 0.75);
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    transition: 2s;
+}
+.borrom_bar:hover {
+    border-right: 200vw solid rgb(119, 0, 255);
 }
 
-.left div {
-    outline: white solid 2px;
-}
-
-.left .socials {
-    outline: blue solid 2px;
-    
-}
-
-.left .blerb {
-    outline: green solid 2px;
-}
 
 .one{
     background: red;
