@@ -9,16 +9,16 @@
     </head>
     <body>
         <header>
-            <img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo">
+            <a class="logo" href="#home_page"><img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo"></a>
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#project_page">Projects</a></li>
                     <li><a href="#">About</a></li>
     
                 </ul>
             </nav>
-            <a href="#"><button>Contact</button></a>
+            <a href="#contact_page"><button>Contact</button></a>
         </header>
         
         {% block content %}

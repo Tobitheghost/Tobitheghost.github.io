@@ -25,6 +25,10 @@ header {
     width: 5%;
     cursor: pointer;
 }
+.logo img {
+    height:100%;
+    width: 100%;
+}
 
 .nav_link {
     list-style: none;
@@ -123,10 +127,20 @@ button:hover {
     border-bottom: 3vh solid transparent;
     top: 45vh;
     scale: 500%;
-
     cursor: pointer;
     transition: 2s;
     filter: drop-shadow(1px 1px 3px rgba(0,0,0,.9));
+}
+.circle_link a {
+    font-family: Impact;
+    position: absolute;
+    color: red;
+    transform: rotate(225deg);
+    top: -25px;
+    left: -10px;
+    font-size: 1vh;
+    text-align: center;
+    filter: drop-shadow(0);
 }
 .circle_link:hover {
     scale: 675%;

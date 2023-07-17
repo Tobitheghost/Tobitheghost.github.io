@@ -4,7 +4,7 @@
 
 <div class="outer-wrapper">
     <div class="wrapper">
-        <div class="slide one">
+        <div class="slide one" id="home_page">
             <div class="left">
                 <div class="hero_text">
                     <p class="blerb">Developing Beautiful<br>Data and Backends</p>
@@ -17,24 +17,24 @@
                         Let me leverage my multidimensional skills to transform your data 
                         into compelling and impactful experiences.</p>
                     <div class="socials">
-                        <div class="first soc"><img src="{{url_for('static', filename='linked.png')}}" alt="Logo" class="logo"></div>
-                        <div class="second soc"><img src="{{url_for('static', filename='github.png')}}" alt="Logo" class="logo"></div>
+                        <div class="first soc"><a href="https://www.linkedin.com/in/brandon-roberts-06555310b/"><img src="{{url_for('static', filename='linked.png')}}" alt="Logo" class="logo"></a></div>
+                        <div class="second soc"><a href="https://github.com/Tobitheghost"><img src="{{url_for('static', filename='github.png')}}" alt="Logo" class="logo"></a></div>
                         <div class="third soc"></div>
                     </div>
                 </div>
             </div>
             <div class="right">
                 <div class="shape_links">
-                    <div class="top_bar"><a>Projects</a></div>
+                    <div class="top_bar"><a href="#project_page">Projects</a></div>
                     <div class="middle_bar"></div>
                     <div class="borrom_bar"></div>
-                    <div class="circle_link"></div>
+                    <div class="circle_link"><a href="#contact_page">Contact Me</a></div>
                 </div>
             </div>
         </div>
-        <div class="slide two"><p>Hello</p></div>
+        <div class="slide two" id="project_page"><p>Hello</p></div>
         <div class="slide three"><p>Hiya</p></div>
-        <div class="slide four"><p>Yo</p></div>
+        <div class="slide four" id="contact_page"><p>Yo</p></div>
     </div>
 </div>
 {% endblock %}
