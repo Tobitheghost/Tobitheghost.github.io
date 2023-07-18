@@ -297,14 +297,14 @@ button:hover {
 }
 .first_sec{
     position: relative;
-    top: -17%;
+    top: 7%;
     display: grid;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 .second_sec{
     position: relative;
-    top: -14%;
+    top: 10%;
     left: -50%;
     display: grid;
     grid-column-start: 2;
