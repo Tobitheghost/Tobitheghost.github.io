@@ -520,22 +520,6 @@ button:hover {
     }
 }
 
-.outer-wrapper {
-    width: 100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y: scroll;
-    position: absolute;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    top: 0;
-    z-index: -1;
-}
-::-webkit-scrollbar {
-    display: none;
-}
-
 .movie_container {
     padding: 2vh;
     background: rgb(194, 194, 194);
@@ -578,3 +562,20 @@ button:hover {
     padding-bottom: 4vh;
     width: 100%;
 }
+
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    top: 0;
+    z-index: -1;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
