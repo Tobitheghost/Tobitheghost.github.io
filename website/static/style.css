@@ -22,6 +22,7 @@ header {
 }
 
 @media (max-width: 1000px) {
+/*The Small Screen Boi*/
     .logo {
         height: 20%;
         width: 20%;
@@ -37,7 +38,7 @@ header {
         grid-row-end: 2;
     }
     .two{
-        background: black;
+        background: linear-gradient(to right, black 2%, rgb(128, 128, 128) 30%);
     }
     .project_container {
         position: relative;
@@ -47,20 +48,22 @@ header {
     }
     .prj.left {
         display: grid;
-        background-color: rgba(255, 255, 255, 0.5); 
+        z-index: 1;
     }
     .shape_links {
         visibility: hidden;
     }
     .prj .prj {
         bottom: 4%;
-        background-color: #cf1515;
+        background: #cf1515;
         transform: scale(.95, .9);
         filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.5));
+        z-index: 1;
     }
-    .prj.right{
+
+    .prj.right {
         display: grid;
-        background-color: rgba(255, 255, 255, 0.5);
+        visibility:hidden;
     }
     .t_blob {
         background-color: lightgray;
@@ -74,30 +77,71 @@ header {
         width: 120%;
         scale: 75%;
     }
-    .skills {
-        position: relative;
-        top: 150%;
+    
+    .fskills {
+        position: absolute;
+        top: 55vh;
+        left: 100vw;
     }
-    .enteries {
+
+    @keyframes skill_float {
+        0% {
+            transform: translateY(-1vh);
+            filter: drop-shadow(10px 10px 3px rgba(0,0,0,.2));
+            color: rgba(255, 255, 255, 0.1);
+        }
+    
+        50% { 
+            transform: translateY(1vh);
+            filter: drop-shadow(2px 2px 1px rgba(0,0,0,1));
+            color: rgba(255, 255, 255, 1);
+        }
+    
+        100% {
+            transform: translateY(-1vh);
+            filter: drop-shadow(10px 10px 7px rgba(0,0,0,.2));
+            color: rgba(255, 255, 255, 0.1);
+        }
+    }
+    
+
+    .theskilltitle {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.5);
+        bottom: 30vh;
+        font-size: 4em;
+        left: 15vw;
+        animation: skill_float 5s ease-in-out infinite;
+    }
+    .fenteries {
         position: relative;
         left: 18%;
     }
-    .first_sec{
+    .skill_sec {
         display: inline-block;
         position: relative;
     }
-    .second_sec{
-        display: inline-block;
-        position: relative;
+    .rectangle_skill {
+        position: absolute;
+        background: lightgray;
+        left: -3px;
+        width: .8em;
+        bottom: 1px;
+        height: 23.5em;
+        z-index: 0;
     }
-    .ent{
-        font-size: 10px;
+    .entr {
+        font-size: 1em;
         position: relative;
-        color: lightgray;
+        color: black;
+        filter: drop-shadow(2px 2px 1.5px rgba(128, 128, 128, 1));
+    }
+    .skills {
+        visibility: hidden;
     }
     .four{
         padding: 2%;
-        background: lightgrey;
+        background: grey;
         display: block;
         position: relative;
     }
@@ -112,6 +156,7 @@ header {
     }
 }
 @media (min-width: 1000px) {
+/*The Full Screen Version*/
     .logo {
         height: 5%;
         width: 5%;
@@ -227,7 +272,7 @@ header {
         border-right: 200vw solid rgb(119, 0, 255);
     }
     .two{
-        background: darkgray;
+        background: linear-gradient(to right, black 10%, gray 100%);
     }
     .project_container {
         position: relative;
@@ -237,11 +282,11 @@ header {
     }
     .prj.left {
         display: grid;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.01);
     }
     .prj.right {
         display: grid;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.01);
     }
     .prj .prj {
         bottom: 5%;
@@ -253,17 +298,28 @@ header {
         position: absolute;
         height: 100%;
         width: 100%;
-        background: black;
+        background-color: black;
         filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
         transition: 2s;
+        z-index: 2;
     }
+
+    .o1 .imagething{
+        background-image:url(/static/PhotoViewer.jpg);
+        background-repeat: no-repeat;
+        background-size: inherit;
+        background-origin: content-box;
+        filter: blur(0px) grayscale(0%) opacity(100%); 
+    }
+    .imagething p{
+        z-index: 1;
+    }
+
     .imagething:hover {
         width: 30%;
+        filter: blur(2px) grayscale(100%) opacity(50%);
     }
-    .three{
-        display: grid;
-        background: rgb(139, 0, 0);
-    }
+
     @keyframes floating {
         0% {
             transform: translateY(-5px);
@@ -281,13 +337,18 @@ header {
         }
     }
     .t_blob {
-        background-color: lightgray;
+        background-color: black;
+        color: white;
         padding: 3%;
         position: absolute;
         margin: 5%;
         top: 17%;
         box-shadow: 20px 30px 20px 10px red;
         animation: floating 3s ease-in-out infinite;
+    }
+    .fskills {
+        position: absolute;
+        visibility: hidden;
     }
     .skills {
         position: relative;
@@ -318,7 +379,7 @@ header {
     }
     .ent{
         position: relative;
-        color: rgb(216, 216, 216);
+        color: black;
         transform: rotate(13deg);
     }
     .example {
@@ -428,9 +489,11 @@ button:hover {
     position: absolute;
     left: 32%;
 }
+
+
 .three{
     display: grid;
-    background: black;
+    background: grey;
 }
 .about {
     position: relative;
@@ -443,20 +506,19 @@ button:hover {
 @keyframes floating {
     0% {
         transform: translateY(-5px);
-        box-shadow: 20px 30px 20px 5px rgba(124, 124, 124, 0.2);
+        box-shadow: 20px 30px 20px 5px rgba(0, 0, 0, 0.2);
     }
 
     50% { 
         transform: translateY(5px);
-        box-shadow: 12px 15px 10px 10px rgba(124, 124, 124, .5);
+        box-shadow: 12px 15px 10px 10px rgba(0, 0, 0, .5);
     }
 
     100% {
         transform: translateY(-5px);
-        box-shadow: 20px 30px 20px 5px rgba(124, 124, 124, .2);
+        box-shadow: 20px 30px 20px 5px rgba(0, 0, 0, .2);
     }
 }
-
 
 .outer-wrapper {
     width: 100vh;
@@ -472,4 +534,47 @@ button:hover {
 }
 ::-webkit-scrollbar {
     display: none;
+}
+
+.movie_container {
+    padding: 2vh;
+    background: rgb(194, 194, 194);
+    display: grid;
+    column-gap: 10px;
+}
+
+.img_container {
+    width: 20vw;
+    display: flex;
+}
+.poster {
+    width: 100%;
+}
+
+.poster_img {
+    width: 100%;
+}
+.desc_contain {
+    padding-top: 2vh;
+    margin-right: 45vw;
+    width: 560px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+.title {
+    font-weight:bolder;
+    padding-bottom: 2vh;
+}
+.release_date {
+    font-weight: bold;
+    padding-bottom: 0vh;
+}
+.trailer {
+    padding-top: 20vh;
+}
+
+.gen_desc {
+    padding-top: 1vh;
+    padding-bottom: 4vh;
+    width: 100%;
 }

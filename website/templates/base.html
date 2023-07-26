@@ -9,17 +9,20 @@
     </head>
     <body>
         <header>
-            <a class="logo" href="#home_page"><img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo"></a>
+            <a class="logo" href="{{ url_for('homePage.home') }}"><img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo"></a>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#project_page">Projects</a></li>
-                    <li><a href="#about_me">About</a></li>
-    
+                    <li><a href="{{ url_for('homePage.movies') }}">Movies</a></li>
+                    <li><a href="{{ url_for('homePage.home') }}#project_page">Projects</a></li>
+                    <li><a href="{{ url_for('homePage.home') }}#about_me">About</a></li>
                 </ul>
             </nav>
             <a href="#contact_page"><button>Contact</button></a>
         </header>
+
+        <script>
+
+        </script>
         
         {% block content %}
             <h1>
