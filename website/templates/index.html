@@ -38,29 +38,36 @@
                     <div class="prj o1">
                         <div class="imagething">
                         </div>
-                        <p class="pj_desc">howdy howdy howdy howdy howdy</p>
+                        <p class="pj_desc">The Photo Viewer site was made with Flask and helped teach me how to create a platform that can handle unpredictable content. The site takes in images
+                            from a specific directory and preserves their aspect ratio while still adjusting them to fit uniformly along side any other content.
+                        </p>
                     </div>
                     <div class="prj o2">
                         <div class="imagething"></div>
-                        <p class="pj_desc">howdy howdy howdy howdy howdy</p>
+                        <p class="pj_desc">This is where another project is going to go. I havent put one here yet, but we can close our eyes and imagine an Amazing Project site here.</p>
                     </div>
                     <div class="prj o3">
                         <div class="imagething"></div>
-                        <p class="pj_desc">howdy howdy howdy howdy howdy</p>
+                        <p class="pj_desc">What's the best thing about Switzerland
+                            <br><br><br>I'm not sure, bu the flag is a big plus.</p>
                     </div>
                 </div>
                 <div class="prj right">
                     <div class="prj o4">
                         <div class="imagething"></div>
-                        <p class="pj_desc fourer">howdy howdy howdy howdy howdy</p>
+                        <p class="pj_desc fourer">How many apples can you grow on a tree? All of them.</p>
                     </div>
                     <div class="prj o5">
                         <div class="imagething"></div>
-                        <p class="pj_desc fiver">howdy howdy howdy howdy howdy</p>
+                        <p class="pj_desc fiver">What's a pirate's favorite letter? You'd think it's the "R," but it's really the "C."</p>
                     </div>
                     <div class="prj o6">
                         <div class="imagething"></div>
-                        <p class="pj_desc sixer">howdy howdy howdy howdy howdy</p>
+                        <p class="pj_desc sixer">All the jokes were placeholders, I'm working on putting in projects soon. Working on projects as a group, having those around me who may have more experiences
+                            and having recources to communicate with others makes working in a perfessional setting easy. If I feel like something doesnt meet the mark, communication with my peers is a perfect remedy.
+                            Creating a personal site requires me to provide projects that are finished, which is hard for me because I always come back to projects to improve myself. So knowing when something is Portfolio
+                            site ready can be intimidating. But I appreciate you taking time to look at my site. 
+                        </p>
                     </div>
                 </div>
             </div>
@@ -90,7 +97,6 @@
             </div>
         </div>
         <div class="slide three" id="about_me">
-           
             <div class="about">
                 <div class="t_blob">
                     <p>I'm Brandon, a passionate and skilled computer scientist hailing from Kansas City, Missouri. While I've been coding for personal projects for several years, my journey into full-time focus on computer science commenced a few years ago when exciting opportunities presented themselves, and I couldn't resist seizing them.
@@ -108,6 +114,7 @@
             <div class="skills">
                 <div class="enteries">
                     <div class="first_sec">
+                        <div class="ent Titleskills"><p>Skills</p></div>
                         <div class="ent HTML"><p>HTML</p></div>
                         <div class="ent CSS"><p>CSS</p></div>
                         <div class="ent PYTHON"><p>PYTHON</p></div>
@@ -116,8 +123,6 @@
                         <div class="ent MACH_Learning"><p>Machine Learning</p></div>
                         <div class="ent Data_Viz"><p>Data Visiualization</p></div>
                         <div class="ent WEB_SCRA"><p>Web Scrapping</p></div>
-                    </div>
-                    <div class="second_sec">
                         <div class="ent CLD"><p>Cloud Computing</p></div>
                         <div class="ent DATAEX"><p>Data Extraction</p></div>
                         <div class="ent DATASTRCT"><p>Data Structures and Algorithms</p></div>
@@ -129,12 +134,16 @@
                     </div>
                 </div>
             </div>
-            <div class="example"></div>
-            <div class="something"></div>
         </div>
-        <div class="slide four" id="contact_page"><p class="email">You can contact me at: kklogos13@gmail.com</p>
-        <p class="excuse">My site is currently under construction, I'm always learning and working on new projects.
-        Let me know what you think would improve my site with the email above.</p></div>
+        <form class="slide- four" id="contact_page" method="POST">
+            <div class="contact_form">
+                <p class="ContactForm">Contact Form</p>
+                <input type="text" name="name" placeholder="  Enter your name!" autocomplete="off" required>
+                <input type="email" name="email" placeholder="  Enter your email!" autocomplete="email" required>
+                <textarea name="contact_msg" rows="6" cols="60" placeholder="  Enter a Message" autocomplete="off" required></textarea>
+                <button type="submit" class="contact_submit">Send Message</button>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}
