@@ -138,6 +138,11 @@
         <form class="slide- four" id="contact_page" method="POST">
             <div class="contact_form">
                 <p class="ContactForm">Contact Form</p>
+                <!-- {% if success %} --> 
+                <div class="alert-success">
+                    Message sent! Thank you.
+                </div> 
+                <!--  {% endif %} -->                  
                 <input type="text" name="name" placeholder="  Enter your name!" autocomplete="off" required>
                 <input type="email" name="email" placeholder="  Enter your email!" autocomplete="email" required>
                 <textarea name="contact_msg" rows="6" cols="60" placeholder="  Enter a Message" autocomplete="off" required></textarea>

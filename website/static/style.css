@@ -478,7 +478,36 @@ header {
 
 } 
 
+@keyframes dissapear {
+    0% {
+        transform: translateY(-1em);
+        opacity: 0;
+    }
 
+    50% { 
+        transform: translateY(0em);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1em);
+        opacity: 0;
+     
+    }
+}
+
+.alert-success {
+    top: 23%;
+    right:19%;
+    position:absolute;
+    padding: .5em;
+    background-color: #cf1515;
+    opacity: 0;
+    align-content: center;
+    border-radius: 13px;
+    color: white;
+    animation: dissapear 2s;
+}
 .logo img {
     height:100%;
     width: 100%;
