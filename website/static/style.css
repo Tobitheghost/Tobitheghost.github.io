@@ -316,6 +316,11 @@ header {
     .two{
         background: linear-gradient(to right, black 10%, gray 100%);
     }
+    .two a {
+        font-size: 3vh;
+        font-weight: 100;
+        color: white;
+    }
     .project_container {
         position: relative;
         display: grid;
@@ -351,6 +356,14 @@ header {
 
     .o1 .imagething{
         background-image:url(/static/PhotoViewer.jpg);
+        background-repeat: no-repeat;
+        background-size: inherit;
+        background-origin: content-box;
+        /*filter: blur(0px) grayscale(0%) opacity(100%);*/
+    }
+    .o2 .imagething{
+        background-image:url(/static/texas.PNG);
+        background-position: 50%;
         background-repeat: no-repeat;
         background-size: inherit;
         background-origin: content-box;

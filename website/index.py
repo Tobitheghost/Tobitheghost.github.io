@@ -22,3 +22,7 @@ def home():
 @homePage.route("/movies")
 def movies():
     return render_template("movies.html")
+
+@homePage.route("/TexasToms")
+def texas():
+    return render_template('texas toms.html')
