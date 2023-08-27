@@ -12,16 +12,15 @@ body {
     justify-content: left;
     position: relative;
     right: 80%;
-    height: 5vh;
-    width: 10%;
+    height: 7vh;
+    width: auto;
     cursor: pointer;
 }
 
 .logo img {
     justify-content: center;
     position: relative;
-    height: 100%;
-    width: auto;
+    scale: 100%;
     left: 0px;
 }
 
