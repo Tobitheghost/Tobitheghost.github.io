@@ -9,10 +9,10 @@
     </head>
     <body>
         <header>
-            <a class="logo" href="{{ url_for('homePage.home') }}"><img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo"></a>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('homePage.home') }}">Portfolio</a></li>
+                    <li><a href="{{ url_for('homePage.texas') }}">Home</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
