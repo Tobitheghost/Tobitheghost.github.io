@@ -7,7 +7,25 @@
 body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-li, a, button {
+
+.logo {
+    justify-content: left;
+    position: relative;
+    right: 80%;
+    height: 5vh;
+    width: 10%;
+    cursor: pointer;
+}
+
+.logo img {
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: auto;
+    left: 0px;
+}
+
+header li,header a,header button {
 
     font-family: sans-serif;
     font-weight: 500;
@@ -19,9 +37,11 @@ li, a, button {
 header {
     background-color: rgb(255, 224, 86);
     display: flex;
-    justify-content: right;
+    height: 10vh;
+    width: 100%;
     align-items: center;
-    padding: 30px 5%;
+    justify-content: right;
+    padding: 10px 5vw 10px 20%;
 }
 
 .nav_link {
@@ -31,6 +51,11 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0px 10px;
+    
+}
+
+.nav_links ,.navButton {
+    display:flex;
 }
 
 .nav_links li a {
@@ -41,6 +66,9 @@ header {
     color: #cf1515;
 }
 
+header button {
+    color: aliceblue;
+}
 button {
     padding: 9px 25px;
     background-color: #cf1515;
@@ -185,6 +213,7 @@ img {
 }
 
 .Form {
+    width: 50vw;
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -220,11 +249,6 @@ img {
     list-style: none;
 }
 
-.Form {
-    display: grid;
-    width: 50vw;
-}
-
 .container {
     padding: 0px 20px 0px 20px;
 }
@@ -235,9 +259,28 @@ img {
 .Form div div{
     height: 90px;
 }
-input {
-    padding: 0px 5px 0px 5px;
-    height: 50px;
+
+.Form .message {
+    height: 32vh;
+    margin-bottom: 2vh;
+}
+.Form button {
+    bottom: 10vh;
+}
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1%;
+    border-radius: 15px;
+    height: 30vh;
     width: 100%;
-    font-size: 30px;
+    border-color: #cf1515;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1%;
+    height: 4em;
+    border-radius: 15px;
+    width: 100%;
+    border-color: #cf1515;
 }

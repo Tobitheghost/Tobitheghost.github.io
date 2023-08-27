@@ -9,13 +9,14 @@
     </head>
     <body>
         <header>
+            <a class="logo" href="{{ url_for('homePage.home') }}"><img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo"></a>
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#"><button>ORDER ONLINE</button></a>
+            <a  class="navButton" href="#"><button>ORDER ONLINE</button></a>
         </header>
         
         <div class="hero" style="background-image: url('static/hero.jpg');">
@@ -134,10 +135,10 @@
                     </div>
                     <div class="message">
                         <p>Message</p>
-                        <input type="text">
+                        <textarea name="contact_msg" rows="6" cols="60" placeholder="  Enter a Message" autocomplete="off" required></textarea>
                     </div>
-                    <div type="submit">
-                        <button>Submit</button>
+                    <div class="contactButton">
+                        <button type="submit">Submit</button>
                     </div>
                 </div>
             </div>
