@@ -5,7 +5,7 @@
         <title>Texas Toms Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/texas toms style.css">
+        <link rel="stylesheet" href="/static/texas_toms/texas toms style.css">
     </head>
     <body>
         <header>
@@ -19,25 +19,27 @@
             <a  class="navButton" href="#"><button>ORDER ONLINE</button></a>
         </header>
         
-        <div class="hero" style="background-image: url('static/hero.jpg');">
-            <h1>TEXAS TOMS</h1>
-            <h2>Made to order - always fresh and healthy food</h2>
-            <div class="buttonHero">
-                <button>Start Your Order</button>
+        <div class="heroContainer">
+            <div class="hero" style="background-image: url('static/texas_toms/hero.jpg');">
+                <h1>TEXAS TOMS</h1>
+                <h2>Made to order - always fresh and healthy food</h2>
+                <div class="buttonHero">
+                    <button>Start Your Order</button>
+                </div>
             </div>
         </div>
         <div class="middle">
             <div class="img One">
-                <img src="{{url_for('static', filename='middleOne.jpg')}}"/>
+                <img src="{{url_for('static', filename='texas_toms/middleOne.jpg')}}"/>
             </div>
             <div class="img Two">
-                <img src="{{url_for('static', filename='middleTwo.jpg')}}"/>
+                <img src="{{url_for('static', filename='texas_toms/middleTwo.jpg')}}"/>
             </div>
             <div class="img Three">
-                <img src="{{url_for('static', filename='middleThree.jpg')}}"/>
+                <img src="{{url_for('static', filename='texas_toms/middleThree.jpg')}}"/>
             </div>
             <div class="img Four">
-                <img src="{{url_for('static', filename='middleFour.jpg')}}"/>
+                <img src="{{url_for('static', filename='texas_toms/middleFour.jpg')}}"/>
             </div>
         </div>
         <div class="Reviews">

@@ -2,6 +2,8 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 
+<link rel="stylesheet" href="/static/main/main.css">  
+
 <div class="outer-wrapper">
     <div class="wrapper">
         <div class="slide one" id="home_page">
@@ -17,8 +19,8 @@
                         Let me leverage my multidimensional skills to transform your data 
                         into compelling and impactful experiences.</p>
                     <div class="socials">
-                        <div class="first soc"><a href="https://www.linkedin.com/in/brandon-roberts-06555310b/"><img src="{{url_for('static', filename='linked.png')}}" alt="Logo" class="logo"></a></div>
-                        <div class="second soc"><a href="https://github.com/Tobitheghost"><img src="{{url_for('static', filename='github.png')}}" alt="Logo" class="logo"></a></div>
+                        <div class="first soc"><a href="https://www.linkedin.com/in/brandon-roberts-06555310b/"><img src="{{url_for('static', filename='main/linked.png')}}" alt="Logo" class="logo"></a></div>
+                        <div class="second soc"><a href="https://github.com/Tobitheghost"><img src="{{url_for('static', filename='main/github.png')}}" alt="Logo" class="logo"></a></div>
                         <div class="third soc"></div>
                     </div>
                 </div>
@@ -43,15 +45,17 @@
                         </p>
                     </div>
                     <div class="prj o2">
-                    <a href="{{ url_for('homePage.texas') }}">
+                        <a href="{{ url_for('homePage.texas') }}">
                         <div class="imagething"></div>
                         <p class="pj_desc">Creating this site showed me what tools everyday pages use, like google Api's and interactive menus</p>
                     </a>
                     </div>
                     <div class="prj o3">
+                        <a href="{{ url_for('homePage.tictactoe') }}">
                         <div class="imagething"></div>
                         <p class="pj_desc">What's the best thing about Switzerland
                             <br><br><br>I'm not sure, bu the flag is a big plus.</p>
+                        </a>
                     </div>
                 </div>
                 <div class="prj right">

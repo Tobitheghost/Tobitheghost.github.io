@@ -1,0 +1,83 @@
+@media (max-width: 700px) {
+    /* small movie Page */
+    .img_container {
+        width: 20vw;
+        display: flex;
+    }
+    .poster {
+        width: 100%;
+    }
+    .title{
+        width: 70vw;
+    }
+    .poster_img {
+        width: 100%;
+    }
+    .gen_desc {
+        height: 0;
+    }
+    iframe {
+        position: relative;
+        right: 20vw;
+        width: fit-content;
+        height: fit-content;
+    }
+    .title {
+        font-weight:bolder;
+        padding-bottom: 2vh;
+    }
+    .release_date {
+        visibility: hidden;
+    }
+    .trailer {
+        padding-top: 0;
+    }
+    
+    .gen_desc {
+        visibility: hidden;
+    }
+}
+
+.movie_container {
+    padding: 2vh;
+    background: rgb(194, 194, 194);
+    display: grid;
+    column-gap: 10px;
+    overflow-x: hidden;
+}
+
+.img_container {
+    width: 20vw;
+    display: flex;
+}
+.poster {
+    width: 100%;
+}
+
+.poster_img {
+    width: 100%;
+}
+.desc_contain {
+    padding-top: 2vh;
+    margin-right: 45vw;
+    width: 560px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+.title {
+    font-weight:bolder;
+    padding-bottom: 2vh;
+}
+.release_date {
+    font-weight: bold;
+    padding-bottom: 0vh;
+}
+.trailer {
+    padding-top: 20vh;
+}
+
+.gen_desc {
+    padding-top: 1vh;
+    padding-bottom: 4vh;
+    width: 100%;
+}

@@ -5,11 +5,11 @@
         <title>{% block title %}Base{% endblock %}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/static/style.css">    
+        <link rel="stylesheet" href="/static/main/style.css">    
     </head>
     <body>
         <header>
-            <a class="logo" href="{{ url_for('homePage.home') }}"><img src="{{url_for('static', filename='logo.png')}}" alt="Logo" class="logo"></a>
+            <a class="logo" href="{{ url_for('homePage.home') }}"><img src="{{url_for('static', filename='main/logo.png')}}" alt="Logo" class="logo"></a>
             <nav>
                 <ul class="nav_links">
                     <li><a href="{{ url_for('homePage.movies') }}">Movies</a></li>

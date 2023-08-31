@@ -1,0 +1,31 @@
+.gameContainer {
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    color: white;
+    font-family: Impact, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vh
+}
+
+.game {
+    padding: 0px 3px 0px 3px;
+    text-align: center;
+    height: 30vh;
+    width: 30vh;
+}
+
+img {
+    overflow-y: hidden;
+    display: flex;
+    position: relative;
+    width: 95%;
+}

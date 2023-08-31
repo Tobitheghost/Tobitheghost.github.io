@@ -26,3 +26,11 @@ def movies():
 @homePage.route("/TexasToms")
 def texas():
     return render_template('texas toms.html')
+
+@homePage.route("/games")
+def games():
+    return render_template('games.html')
+
+@homePage.route("/tictactoe")
+def tictactoe():
+    return render_template('tictactoe.html')

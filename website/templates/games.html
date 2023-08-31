@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+{% block title %}Tic Tac Toe{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="static/games/games.css">  
+
+    <div class="gameContainer">
+        <div class="container">
+
+            <div class="game one">
+                <p class="title">
+                    Tic Tac Toe
+                </p>
+                <a href="{{ url_for('homePage.tictactoe') }}"><img src="{{url_for('static', filename='main/extra/meme place holder/qax84gs2dgx41.jpg')}}" alt="placeholder" class="tictactoe"></a>
+            </div>
+            <div class="game two">
+                <p class="title">
+                    Placeholder
+                </p>
+                <a href="#"><img src="{{url_for('static', filename='main/extra/meme place holder/3ac97f59-7e8e-4745-88dd-8d78cce1e2b3_screenshot.jpg')}}" alt="placeholder" class="tictactoe"></a>
+            </div>
+            <div class="game three">
+                <p class="title">
+                    Placeholder
+                </p>
+                <a href="#"><img src="{{url_for('static', filename='main/extra/meme place holder/72834198_1415241251961007_6216790712273338368_n.jpg')}}" alt="placeholder" class="tictactoe"></a>
+            </div>
+            <div class="game four">
+                <p class="title">
+                    Placeholder
+                </p>
+                <a href="#"><img src="{{url_for('static', filename='main/extra/meme place holder/ujn51cqocnw41.jpg')}}" alt="placeholder" class="tictactoe"></a>
+            </div>
+            
+
+            <div class="game six">
+                <p class="title">
+                    Placeholder
+                </p>
+                <a href="#"><img src="{{url_for('static', filename='main/extra/meme place holder/79119916_841487982937480_7692608661352349696_o.jpg')}}" alt="placeholder" class="tictactoe"></a>
+            </div>
+            
+            <div class="game eight">
+                <p class="title">
+                    Placeholder
+                </p>
+                <a href="#"><img src="{{url_for('static', filename='main/extra/meme place holder/83333585_176785406992803_8469882203013120000_n.jpg')}}" alt="placeholder" class="tictactoe"></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
