@@ -101,6 +101,7 @@ button:hover {
     transform: rotate(-90deg) translateX(-100vh);
     transform-origin: top left;
     overflow-y: scroll;
+    overflow-x: hidden;
     position: absolute;
     scrollbar-width: none;
     -ms-overflow-style: none;

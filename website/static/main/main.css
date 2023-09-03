@@ -378,6 +378,15 @@ header {
         background-origin: content-box;
         /*filter: blur(0px) grayscale(0%) opacity(100%);*/
     }
+
+    .o4 .imagething{
+        background-image:url(/static/portfolio/maps.PNG);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: inherit;
+        background-origin: content-box;
+        /*filter: blur(0px) grayscale(0%) opacity(100%);*/
+    }
     .imagething p{
         z-index: 1;
     }

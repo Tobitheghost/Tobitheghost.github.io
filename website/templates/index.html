@@ -1,8 +1,11 @@
 {% extends "base.html"%}
 {% block title %}Home{% endblock %}
+{% block headLinkScript %}
+<link rel="stylesheet" href="/static/main/main.css">  
+{% endblock %}
 {% block content %}
 
-<link rel="stylesheet" href="/static/main/main.css">  
+
 
 <div class="outer-wrapper">
     <div class="wrapper">
@@ -60,8 +63,10 @@
                 </div>
                 <div class="prj right">
                     <div class="prj o4">
+                        <a href="{{ url_for('homePage.maps') }}">
                         <div class="imagething"></div>
                         <p class="pj_desc fourer">How many apples can you grow on a tree? All of them.</p>
+                        </a>
                     </div>
                     <div class="prj o5">
                         <div class="imagething"></div>
@@ -144,11 +149,9 @@
         <form class="slide- four" id="contact_page" method="POST">
             <div class="contact_form">
                 <p class="ContactForm">Contact Form</p>
-                <!-- {% if success %} --> 
                 <div class="alert-success">
                     Message sent! Thank you.
-                </div> 
-                <!--  {% endif %} -->                  
+                </div>                  
                 <input type="text" name="name" placeholder="  Enter your name!" autocomplete="off" required>
                 <input type="email" name="email" placeholder="  Enter your email!" autocomplete="email" required>
                 <textarea name="contact_msg" rows="6" cols="60" placeholder="  Enter a Message" autocomplete="off" required></textarea>

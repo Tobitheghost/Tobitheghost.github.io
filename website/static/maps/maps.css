@@ -1,0 +1,115 @@
+body {
+    overflow: hidden;
+}
+
+.masterContainer {
+    height:100vmax;
+    background-color: rgb(194, 194, 194);
+    display: flex;
+}
+
+.container {
+    padding-top: 20px;
+    padding-left: 10px;
+    height:360px;
+    width: 30vw;
+    overflow-y: scroll;
+}
+
+.input {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height:6ch;
+    width: 300px;
+}
+
+#results {
+    color: black;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 100%;
+}
+
+.Map_info_container {
+    background-color: rgba(1,1,1,.04);
+    padding-right: 10px;
+    height: 920px;
+    display: grid;
+    width: 70vw;
+} 
+
+#map {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 560px; 
+    width: 70vw;
+}
+
+#parcel_view {
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 360px; 
+    width: 70vw;
+}
+
+.btn_result {
+    color: black;
+    font-size: 1.5ch;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    border: white;
+    background-color: rgba(1,1,1,0);
+}
+.btn_result:hover {
+    color: white;
+    background-color: rgba(0, 0, 255, .7);
+}
+
+.address {
+    font-size: 7ch;
+    font-family:'Arial Narrow Bold', sans-serif, Impact, Haettenschweiler;
+    font-weight:bolder;
+    text-underline-position: below;
+}
+
+.ent {
+    font-size: 2ch;
+    padding-top: 2px;
+}
+
+.labl {
+    font-size: 2ch;
+    font-weight: bold;
+}
+
+.ownerName {
+    display: inline-block;
+    
+}
+.ownerName2 {
+    display: inline-block;
+
+}
+.landUse {
+    display: inline-block;
+
+}
+.asLandVal {
+    display: inline-block;
+    padding-top: 6px;
+
+}
+.asImpVal {
+    display: inline-block;
+
+}
+.exLandVal {
+    display: inline-block;
+
+}
+.exImpVal {
+    display: inline-block;
+
+}

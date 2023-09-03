@@ -1,0 +1,9 @@
+{% for x in range(results|length) %}
+    
+    <button type="submit" class="btn_result" name="btn_result" id='{{addr_index[x][0]}}' value='{{location[x]}}' onclick="updateMap({{addr_index[x][0]}})" hx-get="/results/{{addr_index[x][0]}}" hx-target="#parcel_view">
+        {{results[x][0]}}
+    </button><br>
+
+{% endfor %}
+
+
