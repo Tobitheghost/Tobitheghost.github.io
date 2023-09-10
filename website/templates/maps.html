@@ -1,5 +1,5 @@
 {% extends "base.html"%}
-{% block title %}Maps{% endblock %}
+{% block title %}Home{% endblock %}
 {% block headLinkScript %}
     <link rel="stylesheet" href="/static/maps/maps.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -9,14 +9,16 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+
     <script src="https://unpkg.com/htmx.org@1.9.5"></script>
 {% endblock %}
 {% block content %}
 
 <div class="masterContainer">
     <div class="container">
+        <p class="title"> Parcel Value by Address </p>
     
-        <input type="number" class="input" name="q" placeholder="enter your hosue numbers" autocomplete="off" hx-get="/search" hx-trigger="keyup changed delay:500ms" hx-target="#results">
+        <input type="text" class="input" name="q" placeholder="&nbsp;Enter Your House Numbers" autocomplete="off" hx-get="/search" hx-trigger="keyup changed delay:500ms" hx-target="#results">
     
         <div id="results"></div>
     

@@ -4,11 +4,23 @@
     padding: 0;
 }
 
+:root {
+    --main-text-color: #d9d9d9;
+    --secondary-text-color: white;
+    --red-accent-color:#cf1515;
+    --secondary-red-accent-color:rgba(207, 21, 21, 0.6);
+    --hero-title: Bolder 65px Arial, Helvetica, sans-serif;
+    --title-font: Bolder 32.5px Arial, Helvetica, sans-serif;
+    --title-font-color: black;
+    --paragraph-font: Bolder 16.25px Arial, Helvetica, sans-serif;
+    --paragraph-font-color: rgb(31, 31, 31);
+}
+
 li, a, button {
     font-family: sans-serif;
     font-weight: 500;
     font-size: 10px;
-    color: #d9d9d9;
+    color: var(--main-text-color);
     text-decoration: none;
 }
 
@@ -19,23 +31,19 @@ header {
     padding: 3vh 10%;
     background: rgba(0, 0, 0, .5);
     z-index: 10;
+    height: 13vh;
 }
+
 
 @media (max-width: 1250px) {
 /*The Small Screen Boi*/
     .logo {
-        height: 20%;
-        width: 20%;
+        height: 4vh;
         cursor: pointer;
     }
     .nav_links li {
         display: inline-block;
         padding: 0px 7px;
-    }
-    .slide .left {
-        display: block;
-        grid-row-start: 1;
-        grid-row-end: 2;
     }
 }
 
@@ -43,8 +51,7 @@ header {
 @media (min-width: 1250px) {
 /*The Full Screen Version*/
     .logo {
-        height: 5%;
-        width: 5%;
+        height: 5vh;
         cursor: pointer;
     }
     .nav_links li {
@@ -58,13 +65,14 @@ header {
     right:19%;
     position:absolute;
     padding: .5em;
-    background-color: #cf1515;
+    background-color: var(--red-accent-color);
     opacity: 0;
     align-content: center;
     border-radius: 13px;
     color: white;
     animation: dissapear 2s;
 }
+
 .logo img {
     height:100%;
     width: 100%;
@@ -79,20 +87,21 @@ header {
 }
 
 .nav_links li a:hover {
-    color: #cf1515;
+    color: var(--red-accent-color);
 }
 
 button {
     padding: 9px 25px;
-    background-color: rgba(207, 21, 21, 0.6);
+    background-color: #cf151599;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    height: 4vh;
 }
 
 button:hover {
-    background-color: rgba(207, 21, 21, 1);
+    background-color: var(--red-accent-color);
 }
 
 .outer-wrapper {
@@ -108,7 +117,7 @@ button:hover {
     top: 0;
     z-index: -1;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
-

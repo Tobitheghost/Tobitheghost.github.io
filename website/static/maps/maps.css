@@ -2,6 +2,14 @@ body {
     overflow: hidden;
 }
 
+.title{
+    font-size: 4ch;
+    font-family:'Arial Narrow Bold', sans-serif, Impact, Haettenschweiler;
+    font-weight:bolder;
+    text-underline-position: below;
+    padding-bottom: 6px;
+}
+
 .masterContainer {
     height:100vmax;
     background-color: rgb(194, 194, 194);
@@ -13,7 +21,6 @@ body {
     padding-left: 10px;
     height:360px;
     width: 30vw;
-    overflow-y: scroll;
 }
 
 .input {
@@ -28,6 +35,8 @@ body {
     grid-row-start: 2;
     grid-row-end: 3;
     width: 100%;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .Map_info_container {
@@ -41,16 +50,15 @@ body {
 #map {
     grid-row-start: 1;
     grid-row-end: 2;
-    height: 560px; 
+    height: 540px; 
     width: 70vw;
 }
 
 #parcel_view {
-
     grid-row-start: 2;
     grid-row-end: 3;
     height: 360px; 
-    width: 70vw;
+    width: 100%;
 }
 
 .btn_result {
@@ -62,13 +70,14 @@ body {
     border: white;
     background-color: rgba(1,1,1,0);
 }
+
 .btn_result:hover {
     color: white;
     background-color: rgba(0, 0, 255, .7);
 }
 
 .address {
-    font-size: 7ch;
+    font-size: 4ch;
     font-family:'Arial Narrow Bold', sans-serif, Impact, Haettenschweiler;
     font-weight:bolder;
     text-underline-position: below;
@@ -76,7 +85,6 @@ body {
 
 .ent {
     font-size: 2ch;
-    padding-top: 2px;
 }
 
 .labl {
@@ -86,29 +94,39 @@ body {
 
 .ownerName {
     display: inline-block;
-    
 }
+
 .ownerName2 {
     display: inline-block;
 
 }
+
 .landUse {
     display: inline-block;
 
 }
+
+.effDate {
+    display: inline-block;
+    padding-top: 6px;
+}
+
 .asLandVal {
     display: inline-block;
     padding-top: 6px;
 
 }
+
 .asImpVal {
     display: inline-block;
 
 }
+
 .exLandVal {
     display: inline-block;
 
 }
+
 .exImpVal {
     display: inline-block;
 

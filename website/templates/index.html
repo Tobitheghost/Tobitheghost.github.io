@@ -5,149 +5,214 @@
 {% endblock %}
 {% block content %}
 
-
-
 <div class="outer-wrapper">
     <div class="wrapper">
         <div class="slide one" id="home_page">
-            <div class="left">
-                <div class="hero_text">
-                    <p class="blerb">Developing Beautiful Data and Backends</p>
-                    <p>As a versatile professional adept in Python, data structures, 
+            <div class="hero left" id="home">
+                <div class="hero text">
+                    <p class="hero title">
+                        Brandon Roberts
+                    </p>
+                    <p class="hero blerb">
+                        A versatile professional adept in Python, data structures, 
                         design, and front-end development, I bring a comprehensive skill 
-                        set to the table. I  collect, 
-                        maintain, organize, and present information and data in a way that 
-                        resonates with your target audience. I have the knowledge and creativity to deliver 
-                        exceptional solutions that seamlessly integrate form and function. 
-                        Let me leverage my multidimensional skills to transform your data 
-                        into compelling and impactful experiences.</p>
-                    <div class="socials">
-                        <div class="first soc"><a href="https://www.linkedin.com/in/brandon-roberts-06555310b/"><img src="{{url_for('static', filename='main/linked.png')}}" alt="Logo" class="logo"></a></div>
-                        <div class="second soc"><a href="https://github.com/Tobitheghost"><img src="{{url_for('static', filename='main/github.png')}}" alt="Logo" class="logo"></a></div>
-                        <div class="third soc"></div>
+                        set to the data table.
+                    </p>
+                    <div class="social container">
+                        <div class="social link"><a href="https://www.linkedin.com/in/brandon-roberts-06555310b/"><img src="{{url_for('static', filename='main/linked.png')}}" alt="Logo" class="logo"></a></div>
+                        <div class="social link"><a href="https://github.com/Tobitheghost"><img src="{{url_for('static', filename='main/github.png')}}" alt="Logo" class="logo"></a></div>
+                        <div class="social link"></div>
                     </div>
                 </div>
             </div>
-            <div class="right">
-                <div class="shape_links">
-                    <div class="top_bar"><a href="#project_page">Projects</a></div>
-                    <div class="middle_bar"><a href="#contact_page">Contact</a></div>
-                    <div class="borrom_bar"><a href="#about_me">About</a></div>
-                    <div class="circle_link"></div>
+            <div class="hero right">
+                <div class="site_links">
+                    <div class="site_link top">
+                        <div class="project stlnk"><a href="#project_page">Projects</a></div>
+                        <div class="movie stlnk"><a href="{{ url_for('homePage.movies') }}">Movies</a></div>
+                    </div>
+                    <div class="site_link middle">
+                        <div class="maps stlnk"><a href="{{ url_for('homePage.maps') }}">Maps</a></div>
+                        <div class="contact stlnk"><a href="#contact_page">Contact</a></div>
+                    </div>
+                    <div class="site_link bottom">
+                        <div class="about stlnk"><a href="#about_me">About</a></div>
+                        <div class="games stlnk"><a href="{{ url_for('homePage.games') }}">Games</a></div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="slide two" id="project_page">
-            <div class="project_container">
-                <div class="prj left">
-                    <div class="prj o1">
-                        <div class="imagething">
+            <div class="projectSideOne pjs">
+                <div class="portfolioMaps prjcont">
+                    <a href="{{ url_for('homePage.maps') }}">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Maps</p>
+                                <ul class="tech_list">
+                                    <li>JavaScript</li>
+                                    <li>Python</li>
+                                    <li>Flask</li>
+                                    <li>HTMX</li>
+                                    <li>OpenStreetMap API</li>
+                                </ul>
+                                <div class="project_blerb">
+                                    <p>
+                                        Using the OpenStreetMap API and a database from Kansas City, I create a interactive map that you can enter an address to view its parcel. The API
+                                        is called with JavaScript and the page is made with Flask and Python. It also uses HTMX to enable a responsive interface without reloading the page
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="pj_desc">The Photo Viewer site was made with Flask and helped teach me how to create a platform that can handle unpredictable content. The site takes in images
-                            from a specific directory and preserves their aspect ratio while still adjusting them to fit uniformly along side any other content.
-                        </p>
-                    </div>
-                    <div class="prj o2">
-                        <a href="{{ url_for('homePage.texas') }}">
-                        <div class="imagething"></div>
-                        <p class="pj_desc">Creating this site showed me what tools everyday pages use, like google Api's and interactive menus</p>
                     </a>
-                    </div>
-                    <div class="prj o3">
-                        <a href="{{ url_for('homePage.games') }}">
-                        <div class="imagething"></div>
-                        <p class="pj_desc">What's the best thing about Switzerland
-                            <br><br><br>I'm not sure, bu the flag is a big plus.</p>
-                        </a>
-                    </div>
                 </div>
-                <div class="prj right">
-                    <div class="prj o4">
-                        <a href="{{ url_for('homePage.maps') }}">
-                        <div class="imagething"></div>
-                        <p class="pj_desc fourer">How many apples can you grow on a tree? All of them.</p>
-                        </a>
-                    </div>
-                    <div class="prj o5">
-                        <div class="imagething"></div>
-                        <p class="pj_desc fiver">What's a pirate's favorite letter? You'd think it's the "R," but it's really the "C."</p>
-                    </div>
-                    <div class="prj o6">
-                        <div class="imagething"></div>
-                        <p class="pj_desc sixer">All the jokes were placeholders, I'm working on putting in projects soon. Working on projects as a group, having those around me who may have more experiences
-                            and having recources to communicate with others makes working in a perfessional setting easy. If I feel like something doesnt meet the mark, communication with my peers is a perfect remedy.
-                            Creating a personal site requires me to provide projects that are finished, which is hard for me because I always come back to projects to improve myself. So knowing when something is Portfolio
-                            site ready can be intimidating. But I appreciate you taking time to look at my site. 
-                        </p>
-                    </div>
+                <div class="portfolioGames prjcont">
+                    <a href="{{ url_for('homePage.games') }}">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Games</p>
+                                <ul class="tech_list">
+                                    <li>JavaScript</li>
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                </ul>
+                                <div class="project_blerb">
+                                    <p>
+                                        Collection of interactiv projects to keep my skills keen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="texas_toms prjcont">
+                    <a href="{{ url_for('homePage.texas') }}">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Texas Toms</p>
+                                <ul class="tech_list">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Flask</li>
+                                    <li>Python</li>
+                                </ul>
+                                <div class="project_blerb">
+                                    <p>
+                                        Using basic Html and Css to create a landing page for a local restaurant. Using these tools in a way that is most common and easy
+                                        for people not familiar with code to give feedback.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolioSpaceHolder2 prjcont plcholder">
+                    <a href="#">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Place Holder</p>
+                                <ul class="tech_list">
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="fskills">
-                <div class="fenteries">
-                    <div class="rectangle_skill"></div>
-                    <p class="theskilltitle">SKILLS</p>
-                    <div class="skill_sec">
-                        <div class="entr HTML"><p>HTML</p></div>
-                        <div class="entr CSS"><p>CSS</p></div>
-                        <div class="entr PYTHON"><p>PYTHON</p></div>
-                        <div class="entr MySQL"><p>MySQL</p></div>
-                        <div class="entr EXCEL"><p>Microsoft Excel</p></div>
-                        <div class="entr MACH_Learning"><p>Machine Learning</p></div>
-                        <div class="entr Data_Viz"><p>Data Visiualization</p></div>
-                        <div class="entr WEB_SCRA"><p>Web Scrapping</p></div>
-                        <div class="entr CLD"><p>Cloud Computing</p></div>
-                        <div class="entr DATAEX"><p>Data Extraction</p></div>
-                        <div class="entr DATASTRCT"><p>Data Structures and Algorithms</p></div>
-                        <div class="entr JAVASCRPT"><p>JavaScript</p></div>
-                        <div class="entr FRONTEND"><p>Front End development</p></div>
-                        <div class="entr BACKEND"><p>Back end development</p></div>
-                        <div class="entr FLASK"><p>Flask</p></div>
-                        <div class="entr DJANGO"><p>Django</p></div>
-                    </div>
+            <div class="projectSideTwo pjs">
+                <div class="portfolioSpaceHolder3 prjcont plcholder">
+                    <a href="#">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Place Holder</p>
+                                <ul class="tech_list">
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolioSpaceHolder4 prjcont plcholder">
+                    <a href="#">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Place Holder</p>
+                                <ul class="tech_list">
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                </ul>
+                                <div class="project_blerb">
+                                    <p>
+                                        Using the OpenStreetMap API and a database from Kansas City, I create a interactive map that you can enter an address to view its parcel. The API
+                                        is called with JavaScript and the page is made with Flask and Python. It also uses HTMX to enable a responsive interface without reloading the page
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolioSpaceHolder5 prjcont plcholder">
+                    <a href="#">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Place Holder</p>
+                                <ul class="tech_list">
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolioSpaceHolder6 prjcont plcholder">
+                    <a href="#">
+                        <div class="project_desc">
+                            <div class="project_img"></div>
+                            <div class="project_content">
+                                <p class="p_title">Texas Toms</p>
+                                <ul class="tech_list">
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                    <li>Howdy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="slide three" id="about_me">
-            <div class="about">
-                <div class="t_blob">
-                    <p>I'm Brandon, a passionate and skilled computer scientist hailing from Kansas City, Missouri. While I've been coding for personal projects for several years, my journey into full-time focus on computer science commenced a few years ago when exciting opportunities presented themselves, and I couldn't resist seizing them.
-                        <br><br>
-                        My expertise in Python has allowed me to contribute significantly to small companies by developing efficient inventory systems and crafting delightful websites for restaurants. Moreover, I've delighted friends with my creative game creations. As I pursued computer science as a career, I found myself embracing new challenges and rising to meet the demands of larger clients.
-                        <br><br>
-                        In response to the growing needs of my clients, I dedicated myself to learning various technologies, including SQL and its numerous variations. By combining Python with these new skills, I have automated data collection and analysis processes, empowering me to present valuable insights to clients effectively.
-                        <br><br>
-                        To further enhance my capabilities, I delved into platforms like Google Charts, Tableau, Zoho Analytics, and even mastered Flask to develop impactful applications. My insatiable appetite for learning has become my driving force, and I pride myself on my ability to excel in any task set before me.
-                        <br><br>
-                        My ultimate passion lies in embracing novel platforms and skills, continuously growing as a computer scientist, and making meaningful contributions to the world through my work.
-                    </p>
-                </div>
+        <form class="slide three" method="POST">
+            <div class="about_me" id="about_me">
+                <p>I'm Brandon, a passionate and skilled computer scientist hailing from Kansas City, Missouri. While I've been coding for personal projects for several years, my journey into full-time focus on computer science commenced a few years ago when exciting opportunities presented themselves, and I couldn't resist seizing them.
+                    <br><br>
+                    My expertise in Python has allowed me to contribute significantly to small companies by developing efficient inventory systems and crafting delightful websites for restaurants. Moreover, I've delighted friends with my creative game creations. As I pursued computer science as a career, I found myself embracing new challenges and rising to meet the demands of larger clients.
+                    <br><br>
+                    In response to the growing needs of my clients, I dedicated myself to learning various technologies, including SQL and its numerous variations. By combining Python with these new skills, I have automated data collection and analysis processes, empowering me to present valuable insights to clients effectively.
+                    <br><br>
+                    To further enhance my capabilities, I delved into platforms like Google Charts, Tableau, Zoho Analytics, and even mastered Flask to develop impactful applications. My insatiable appetite for learning has become my driving force, and I pride myself on my ability to excel in any task set before me.
+                    <br><br>
+                    My ultimate passion lies in embracing novel platforms and skills, continuously growing as a computer scientist, and making meaningful contributions to the world through my work.
+                </p>
             </div>
-            <div class="skills">
-                <div class="enteries">
-                    <div class="first_sec">
-                        <div class="ent Titleskills"><p>Skills</p></div>
-                        <div class="ent HTML"><p>HTML</p></div>
-                        <div class="ent CSS"><p>CSS</p></div>
-                        <div class="ent PYTHON"><p>PYTHON</p></div>
-                        <div class="ent MySQL"><p>MySQL</p></div>
-                        <div class="ent EXCEL"><p>Microsoft Excel</p></div>
-                        <div class="ent MACH_Learning"><p>Machine Learning</p></div>
-                        <div class="ent Data_Viz"><p>Data Visiualization</p></div>
-                        <div class="ent WEB_SCRA"><p>Web Scrapping</p></div>
-                        <div class="ent CLD"><p>Cloud Computing</p></div>
-                        <div class="ent DATAEX"><p>Data Extraction</p></div>
-                        <div class="ent DATASTRCT"><p>Data Structures and Algorithms</p></div>
-                        <div class="ent JAVASCRPT"><p>JavaScript</p></div>
-                        <div class="ent FRONTEND"><p>Front End development</p></div>
-                        <div class="ent BACKEND"><p>Back end development</p></div>
-                        <div class="ent FLASK"><p>Flask</p></div>
-                        <div class="ent DJANGO"><p>Django</p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <form class="slide- four" id="contact_page" method="POST">
-            <div class="contact_form">
+            <div class="contact_form" id="contact_page">
                 <p class="ContactForm">Contact Form</p>
                 <div class="alert-success">
                     Message sent! Thank you.

@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from flask_mail import Mail, Message
 from .utils import mailUsername
 from website import mail
-from .data import data, land_use_code
+from .data import data, land_use_code, movieData
 
 
 homePage = Blueprint('homePage', __name__)
@@ -22,7 +22,13 @@ def home():
 
 @homePage.route("/movies")
 def movies():
-    return render_template("movies.html")
+    listoftitles = movieData['title'].values
+    listofdates = movieData['release date'].values
+    listofdesc = movieData['gen desc'].values
+    listofyoutube = movieData['youtube'].values
+    listofposter = movieData['poster'].values
+    count = len(listoftitles)
+    return render_template("movies.html", titles = listoftitles, dates = listofdates, desc = listofdesc, youtube = listofyoutube, posters = listofposter, count=count)
 
 @homePage.route("/TexasToms")
 def texas():
@@ -44,9 +50,9 @@ def maps():
 def search():
     q = request.args.get('q')
     if q:
-        res = data[data['ADDR'].astype(str).str.contains(str(q))][['ADDRESS']].head(50)
-        ind = data[data['ADDR'].astype(str).str.contains(str(q))][['OBJECTID']].head(50)
-        loc = data[data['ADDR'].astype(str).str.contains(str(q))][['the_geom']].head(50)
+        res = data[data['ADDRESS'].str.lower().astype(str).str.startswith(str(q))][['ADDRESS']].head(50)
+        ind = data[data['ADDRESS'].str.lower().astype(str).str.startswith(str(q))][['OBJECTID']].head(50)
+        loc = data[data['ADDRESS'].str.lower().astype(str).str.startswith(str(q))][['the_geom']].head(50)
 
         loc = loc.values
         res = res.values
@@ -76,7 +82,9 @@ def search():
         loc = loc_content
         ind = index_content
     else:
-        res = []
+        res = [[]]
+        loc = [[]]
+        ind = [[]]
     return render_template('search_results.html', results = res, location=loc, addr_index=ind)
 
 @homePage.route('/results/<addressID>')
@@ -111,8 +119,7 @@ def results(addressID):
                 valueAmt = '0'
                 valueAmt = (f'${valueAmt}.00')
             return valueAmt
-                
-
+        
         address = stringify('ADDRESS')
         owner = stringify('OWN_NAME')
         owner2 = stringify('OWN_NAME2')
@@ -137,17 +144,5 @@ def results(addressID):
             effDate = 'Unlisted'
         if len(effDate) > 3:
             effDate = effDate.split(' ')[0]
-
-        print('')
-        print(f'Address: {address}')
-        print(f'Owners Name/Title: {owner}')
-        print(f'\t{owner2}')
-        print(f'Land Use: {land_use}')
-        print(f'Assessed Land Value: {asLandVal}')
-        print(f'Assessed Improved Value: {asImpVal}')
-        print(f'Exempt Land Value: {ExLandVal}')
-        print(f'Exempt Improved Value: {ExImpVal}')
-        print(f'Parcel Assessed on {effDate}')
-        print('')
 
     return render_template('parcel_results.html',parcel=q,address=address,owner=owner,owner2=owner2,land_use=land_use,asLandVal=asLandVal,asImpVal=asImpVal,ExLandVal=ExLandVal,ExImpVal=ExImpVal,effDate=effDate) 

@@ -1,31 +1,104 @@
 .gameContainer {
-    background-color: darkgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    background: grey;
+    height: 87vh;
+    width: 100%;
 }
 
-.container {
-    color: white;
-    font-family: Impact, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
-    width: 100vh
+.pjs {
+    outline: black solid 0px;
+    display: grid;
+    margin-top: 0;
+    padding: 25px 100px 0 100px;
 }
 
-.game {
-    padding: 0px 3px 0px 3px;
-    text-align: center;
-    height: 30vh;
-    width: 30vh;
+.projectSideOne {
+    outline: red solid 0px;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
-img {
-    overflow-y: hidden;
+.projectSideTwo {
+    outline: red solid 0px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.prjcont {
     display: flex;
-    position: relative;
-    width: 95%;
+    border-radius: 30px;
+    height: 170px;
+    justify-content: right;
+    background-color: rgb(93, 95, 95);
+    transition: background-color 2s;
+}
+
+.prjcont:hover {
+    background-color: #49bbb1;
+}
+
+.prjcont a {
+    display: flex;
+    justify-content: left;
+    border-radius: 30px;
+    width: 100%
+}
+
+.project_desc {
+    display: flex;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.project_img {
+    display: flex;
+    width: 20%;
+    margin: 15px;
+    border-radius: 30px;
+    outline: solid black 2px;
+}
+
+.project_blerb {
+    width: 450px;
+    font:  Bolder 12.25px Arial, Helvetica, sans-serif;
+    padding-left: 11px;
+    padding-top: 5px;
+    color: black;
+}
+
+.portfolioSpaceHolder4 .project_blerb {
+    color: rgba(0, 0, 0, 0);
+}
+
+.tictactoe .project_img {
+    background-image:url(/static/games/tictactoe/tictactoeLink.PNG);
+    background-size: 100%;
+}
+
+.project_content {
+    margin: 15px;
+}
+
+.p_title {
+    color: var(--title-font-color);
+    font: var(--title-font);
+}
+
+.tech_list li{
+    display: inline;
+    padding-left: 10px;
+    color: rgb(31, 31, 31);
+    font: var(--paragraph-font);
+}
+
+.plcholder .tech_list li {
+    color: rgba(0, 0, 0, 0);
+}
+
+.plcholder .p_title{
+    color: rgba(0, 0, 0, 0);
+}
+
+.plcholder .project_blerb{
+    color: rgba(0, 0, 0, 0);
 }

@@ -2,6 +2,12 @@ import pandas as pd
 
 data = pd.read_csv('website/static/maps/Parcels_data.csv')
 
+movieData = pd.read_csv('website/static/movie_posters/movies.csv')
+
+print(movieData['title'].values)
+listoftitles = movieData['poster'].values
+print(listoftitles[0])
+
 land_use_code = {
 '1111' : 'Single Family (Non-Mobile Home Park)',
 '1112' : 'Mobile Home Park',
