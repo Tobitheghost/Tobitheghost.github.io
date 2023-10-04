@@ -34,7 +34,6 @@ header {
     height: 13vh;
 }
 
-
 @media (max-width: 1250px) {
 /*The Small Screen Boi*/
     .logo {
@@ -46,7 +45,6 @@ header {
         padding: 0px 7px;
     }
 }
-
 
 @media (min-width: 1250px) {
 /*The Full Screen Version*/
