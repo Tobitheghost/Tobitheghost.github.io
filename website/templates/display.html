@@ -1,0 +1,4 @@
+<div class="popup-image visable" id="display_container">
+    <span id="close" hx-get="/close" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">&times;</span>
+    <img src="{{url_for('static', filename=image )}}" alt="" class="media">
+</div>

@@ -73,7 +73,7 @@ body {
 
 .btn_result:hover {
     color: white;
-    background-color: rgba(0, 0, 255, .7);
+    background-color: #ff0000;
 }
 
 .address {
@@ -84,10 +84,12 @@ body {
 }
 
 .ent {
+    font-family:'Arial Narrow Bold', sans-serif, Impact, Haettenschweiler;
     font-size: 2ch;
 }
 
 .labl {
+    font-family:'Arial Narrow Bold', sans-serif, Impact, Haettenschweiler;
     font-size: 2ch;
     font-weight: bold;
 }

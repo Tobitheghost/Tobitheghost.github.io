@@ -1,0 +1,50 @@
+{% extends "gxo_base.html"%}
+{% block title %}Home{% endblock %}
+{% block headLinkScript %}{% endblock %}
+{% block content %}
+<div class="hero_title">
+    <p>
+        Welcome to our Facility
+    </p>
+    <p>
+        <span class="click" hx-get="/outline_visible" hx-target="#outline" hx-trigger="mouseover" hx-swap="outerHTML">Click</span> on the sections on the map for a tour!
+    </p>
+</div>
+
+<div class="Container">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer1.png')}}" usemap="#image-map" alt="Map" class="pointer pointer1" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer2.png')}}" usemap="#image-map" alt="Map" class="pointer pointer2" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer3.png')}}" usemap="#image-map" alt="Map" class="pointer pointer3" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer4.png')}}" usemap="#image-map" alt="Map" class="pointer pointer4" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer5.png')}}" usemap="#image-map" alt="Map" class="pointer pointer5" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer6.png')}}" usemap="#image-map" alt="Map" class="pointer pointer6" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/pointer7.png')}}" usemap="#image-map" alt="Map" class="pointer pointer7" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    <img src="{{url_for('static', filename='gxo/map_content/room outline.png')}}" usemap="#image-map" alt="Map" id="outline" class="outline" >
+    <img src="{{url_for('static', filename='gxo/map_content/GXO MAP-Recovered.png')}}" usemap="#image-map" alt="Map" class="image map" >
+
+    <map name="image-map">
+        <area target="" alt="Russ Office" title="Russ Office" href="#" coords="35,633,121,724" shape="rect" hx-get="/disp/Russ" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="New Pick Area" title="New Pick Area" href="#" coords="468,629,527,722" shape="rect" hx-get="/disp/New_Pick" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Office" title="Office" href="#" coords="831,693,925,724" shape="rect" hx-get="/disp/Office" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Break Room" title="Break Room" href="#" coords="1057,725,926,691" shape="rect" hx-get="/disp/Break" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Amazon" title="Amazon" href="#" coords="965,670,1015,688" shape="rect" hx-get="/disp/Amazon" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Wrapping Area" title="Wrapping Area" href="#" coords="1018,633,1093,691" shape="rect" hx-get="/disp/Wrapping" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Charging" title="Charging" href="#" coords="1032,25,1216,103" shape="rect" hx-get="/disp/Charging" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Damage" title="Damage" href="#" coords="791,25,931,91" shape="rect" hx-get="/disp/Damage" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Bathroom" title="Bathroom" href="#" coords="211,43,245,122" shape="rect" hx-get="/disp/Bathroom" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Sit Down Forklift" title="Sit Down Forklift" href="#" coords="1093,722,1060,693" shape="rect" hx-get="/disp/Forklift" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Loading Door 1 - 11" title="Loading Door 1 - 11" href="#" coords="133,691,469,725" shape="rect" hx-get="/disp/Loading_1" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Loading Door 12 - 23" title="Loading Door 12 - 23" href="#" coords="544,696,774,724" shape="rect" hx-get="/disp/Loading_2" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Loading Door LTL - 30" title="Loading Door LTL - 30" href="#" coords="1094,693,1270,724" shape="rect" hx-get="/disp/Loading_3" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+        <area target="" alt="Unloading" title="Unloading" href="#" coords="1288,693,1557,724" shape="rect" hx-get="/disp/Unloading" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">
+    </map>
+</div>
+
+<div class="popup-image invisable" id="display_container">
+    <span hx-get="/close" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">&times;</span>
+    <video autoplay class="media">
+        <source src="{{url_for('static', filename='gxo/map_media/istockphoto-463918882-640_adpp_is.mp4')}}" type="video/mp4" >
+    </video>
+</div>
+{% endblock %}
+{% block afterBodyScript %}{% endblock %}

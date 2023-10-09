@@ -1,0 +1,6 @@
+<div class="popup-image visable" id="display_container" >
+    <span id="close" hx-get="/close" hx-target="#display_container" hx-trigger="click" hx-swap="outerHTML">&times;</span>
+    <video autoplay class="media">
+        <source src="{{url_for('static', filename=video)}}" type="video/mp4" >
+    </video>
+</div>

@@ -1,3 +1,15 @@
+:root {
+    --main-text-color: #d9d9d9;
+    --secondary-text-color: white;
+    --red-accent-color:#cf1515;
+    --secondary-red-accent-color:rgba(207, 21, 21, 0.6);
+    --hero-title: Bolder 65px Arial, Helvetica, sans-serif;
+    --title-font: Bolder 32.5px Arial, Helvetica, sans-serif;
+    --title-font-color: black;
+    --paragraph-font: Bolder 16.25px Arial, Helvetica, sans-serif;
+    --paragraph-font-color: rgb(31, 31, 31);
+}
+
 .slide {
     display: grid;
     width: 100vw;
@@ -423,6 +435,13 @@
     background-repeat: no-repeat;
 }
 
+.gxo_map .project_img {
+    background-image:url(/static/portfolio/gxologo.PNG);
+    background-size: 100%;
+    background-position: 0px 50%;
+    background-repeat: no-repeat;
+}
+
 .project_content {
     margin: 15px;
 }
@@ -462,6 +481,7 @@
 }
 
 .ContactForm {
+    font: var(--title-font);
     font-size: 4em;
     color: white;
 }
@@ -480,10 +500,12 @@ textarea {
     padding: 1%;
     border-radius: 15px;
     height: 30vh;
+    width: 30vw;
     border-color: var(--red-accent-color);
 }
 
 .about_me {
+    font: var(--paragraph-font);
     padding: 75px;
     margin-top: 14vh;
     width: 50vw;
